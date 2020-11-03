@@ -1,0 +1,45 @@
+﻿{extend name="./common/base"}
+{block name="title"}升降式无纸化{/block}
+{block name="css"}
+    #all_pro_head>img {
+        width: 100%;
+    }
+    section {
+        padding: 20px 0;
+    }
+{/block}
+{block name="content"}
+    <!-- content begin -->
+    <section class="all_pro_header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="all_pro_head">
+                <img src="__STATIC__/images/all_pro_head.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="bg-grey">
+        <div class="container">
+            <div class="row">
+                <h2 class="box-title">升降式无纸化</h2>
+                <div class="tiny-border"></div>
+                {foreach $data as $key=>$item}
+                <div class="col-md-3 col-sm-4">
+                    <div class="product no-margin">
+                        <div class="img"><img src="__STATIC__{$item.img}" alt="{$item.name}"></div>
+                        <div class="pro_name">
+                            <div>{$item.name}</div>
+                            <span>{$item.num}</span>
+                        </div>
+                        <div class="pro_detail">{$item.desc}</div>
+                        <button class="btn btn-primary btn-sm" type="button">产品亮点</button>
+                    </div>
+                </div>
+                {/foreach}
+            </div>
+            <div class="pro_page">{$data|raw}</div>
+        </div>
+    </section>
+    <!-- content close -->
+{/block}

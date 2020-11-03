@@ -1,0 +1,95 @@
+﻿{extend name="./common/base"}
+{block name="title"}客户案例{/block}
+{block name="css"}
+    #cus_case_head>div:first-child {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        position: relative;
+    }
+    #cus_case_head>span {
+        font-size: 15px;
+        margin: 0 50px;
+    }
+    #cus_case_head {
+        text-align: center;
+    }
+    .line {
+        height: 6px;
+        width: 200px;
+        background-color: #25B9F9;
+        position: absolute;
+        top: 26px;
+        left: 38%;
+        z-index: 3;
+    }
+    .itemline {
+        height: 2px;
+        width: 100%;
+        background-color: #F8F8F8;
+    }
+    .pagination>li>span:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #25B9F9;
+    }
+{/block}
+{block name="content"}
+    <!-- content begin -->
+    <section class="all_pro_header" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="cus_case_head">
+                    <div>无纸化会议行业领先品牌</div>
+                    <div class="line"></div>
+                    <span>深圳英飞数字技术有限公司，成立于2010年，是国家高新技术企业、双软认证企业、深圳市科技创新企业，拥有数十项产品专利和软件产品著作权。英飞数字是国内无纸化会议系统的倡导者，是智能会议系统中最具影响力的企业之一。</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-grey">
+        <div class="container">
+            <div class="row">
+                <h2 class="box-title">客户案例</h2>
+                <div class="tiny-border"></div>
+                <div class="col-md-12">
+                    <div id="portfolio-filter" class="project-page">
+                        <ul id="filter">
+                            <li><a href="#" class="current" title="">全部</a></li>
+                            <li><a href="#" title="">无纸化（单屏）</a></li>
+                            <li><a href="#" title="">无纸化（双屏）</a></li>
+                            <li><a href="#" title="">桌面式无纸化</a></li>
+                            <li><a href="#" title="">智能电子桌牌</a></li>
+                            <li><a href="#" title="">无纸化（翻转器）</a></li>
+                            <li><a href="#" title="">无纸化（触控开关）</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="container">
+                        <div class="row">
+                            {foreach $data as $key => $item}
+                            <div class="col-md-3 col-sm-4">
+                                <div class="product no-margin">
+                                    <div class="img"><img src="__STATIC__{$item.img}" alt="{$item.title}"></div>
+                                    <span class="pro_detail" style="text-align: center">{$item.title}</span>
+                                </div>
+                            </div>
+                            {/foreach}
+                        </div>
+                        <div class="pro_page">{$data|raw}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content close -->
+{/block}
+{block name="js"}
+    <script>
+        $(".pagination").on("click", "li", function() {
+            $(this).siblings().children().removeClass('current');
+            $(this).children().addClass('current');
+        })
+    </script>
+{/block}

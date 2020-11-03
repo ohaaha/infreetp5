@@ -1,0 +1,84 @@
+﻿{extend name="./common/base"}
+{block name="title"}新闻中心{/block}
+{block name="link"}
+    <link rel="stylesheet" href="__STATIC__/css/about_infree.css">
+{/block}
+{block name="content"}
+    <!-- content begin -->
+    <section class="all_pro_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="all_pro_head">
+                    <img src="__STATIC__/images/all_pro_head.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-grey">
+        <div class="container">
+            <div class="leftbar col-md-2 col-sm-3 col-xs-12">
+                <a class="left_active" data-url="about_infree/news_infree">新闻中心</a>
+                <div class="news_content">
+                    <a class="news_active" data-url="./about-infree/news_infree.html">英飞新闻</a>
+                    <a data-url="./about-infree/news_industry.html">行业新闻</a>
+                    <a data-url="./about-infree/news_media.html">媒体新闻</a>
+                </div>
+                <a data-url="./about-infree/company_profile.html">企业概况</a>
+                <a data-url="./about-infree/development_path.html">发展历程</a>
+                <a data-url="./about-infree/company_culture.html">企业文化</a>
+                <a data-url="./about-infree/brand_concept.html">品牌理念</a>
+                <a data-url="./about-infree/enterprise_qualification.html">企业资质</a>
+                <a data-url="./about-infree/technical_support.html">技术支持</a>
+                <a data-url="./about-infree/system_overview.html">系统概述</a>
+                <a data-url="./about-infree/contact_us.html">联系我们</a>
+            </div>
+            <iframe name="ifd" onload="this.height=ifd.document.body.scrollHeight" style="background-color: white;" frameborder="0" scrolling="no" class="ab_content col-md-10 col-sm-9 col-xs-12" src="about-infree/contact_us.html"></iframe>
+        </div>
+    </section>
+    <!-- content close -->
+{/block}
+{block name="js"}
+    <script>
+        // 处理导航点击后的页面显示
+        $(function() {
+            try {
+                var key = window.location.href.split("?")[1].split("=")[1];
+                getContent(parseInt(key));
+            } catch(ex) {
+                return;
+            }
+        })
+        // 显示点击关于英飞后的内容函数
+        function getContent(key) {
+            console.log(key, $(".leftbar>a:nth-child("+key+")").text())
+            var item = $(".leftbar>a:nth-child(" + (key+1) + ")");
+            item.siblings().removeClass("left_active");
+            item.addClass("left_active");
+            $(".ab_content").attr("src", item.attr("data-url"));
+            key != 1 ? $(".news_content").css("display", "none") : '';
+        }
+
+        // 点击新闻中心
+        $(".leftbar>a:first-child").on("click", function() {
+            let display = $(".news_content").css("display");
+            $(".news_content").css({"display" : display == "none" ? "flex" : "none"});
+        })
+
+        // 点击左侧Tab
+        $(".leftbar").on("click", ">a", function() {
+            $(this).siblings().removeClass("left_active");
+            $(this).addClass("left_active");
+            $(this).index() == 0 ? $(".news_content>a:first-child").addClass("news_active") : $(".news_content>a").removeClass("news_active")
+            $(this).index() != 0 ? $(".news_content").css("display", "none") : "";
+            $(".ab_content").attr("src", $(this).attr("data-url"));
+        })
+
+        // 点击新闻中心里面的tab
+        $(".news_content").on("click", "a", function() {
+            $(this).siblings().removeClass("news_active");
+            $(this).addClass("news_active");
+            $(".ab_content").attr("src", $(this).attr("data-url"));
+        })
+    </script>
+{/block}
+

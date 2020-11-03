@@ -1,0 +1,70 @@
+{extend name="./common/base"}
+{block name="title"}全系产品{/block}
+{block name="css"}
+    #all_pro_head>img {
+        width: 100%;
+    }
+    section {
+        padding: 20px 0;
+    }
+    .nav-tabs {
+        font-size: 16px;
+    }
+    .all_species {
+        margin-bottom: 20px;
+    }
+{/block}
+{block name="content"}
+    <!-- content begin -->
+    <section class="all_pro_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="all_pro_head">
+                    <img src="__STATIC__/images/all_pro_head.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <h2 class="box-title">全系产品</h2>
+        <div class="tiny-border"></div>
+        <div class="all_species" role="navigation">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="{:url('all_product')}?key=1">升降式无纸化</a></li>
+                <li role="presentation"><a href="{:url('all_product')}?key=5">桌面式无纸化</a></li>
+                <li role="presentation"><a href="{:url('product/index', ['key' => 2])}">电子桌牌</a></li>
+                <li role="presentation"><a href="{:url('product/index', ['key' => 3])}">超薄升降一体机</a></li>
+                <li role="presentation"><a href="{:url('product/index', ['key' => 4])}">软件产品</a></li>
+            </ul>
+        </div>
+        <div class="all_procontent">
+            <div class="container">
+                {foreach $data as $key => $item}
+                <div class="col-md-3 col-sm-4" style="margin-bottom: 20px">
+                    <div class="product no-margin">
+                        <div class="img"><img src="__STATIC__{$item.img}" alt="{$item.name}"></div>
+                        <div class="pro_name">
+                            <div>{$item.name}</div>
+                            <span>{$item.num}</span>
+                        </div>
+                        <div class="pro_detail">{$item.desc}</div>
+                        <button class="btn btn-primary btn-sm" type="button">产品亮点</button>
+                    </div>
+                </div>
+                {/foreach}
+            </div>
+            <div class="pro_page">{$data|raw}</div>
+        </div>
+    </section>
+    <!-- content close -->
+{/block}
+{block name="js"}
+    <script>
+        // 切换产品tab
+        $(".nav-tabs").on("click", "li", function() {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+        })
+    </script>
+{/block}
+

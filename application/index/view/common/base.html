@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{block name="title"}{/block}</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="-1" http-equiv="Expires">
+    <meta content="no-cache" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="Pragma">
+    <meta property="qc:admins" content="34007776226210116655">
+    <meta name="keywords" content="无纸化,无纸化会议,无纸化会议系统,无纸化会议软件,无纸化多媒体会议系统,电子桌牌,升降屏,升降触摸屏,升降桌牌,液晶电子桌牌,会议桌牌,智能电子桌牌,超薄升降一体机,超薄升降器,超薄高清升降一体机,无纸化办公,液晶升降屏,无纸化会议方案,无纸化会议厂家,无纸化会议系统厂家,无纸化会议系统方案,升降器,升降触控,触摸升降,触控升降,英飞,英飞数字,infree">
+    <meta name="description" content="深圳英飞数字技术有限公司，国家高新认证企业，无纸化会议系统优质品牌！20年专业会议软件开发经验，提供行业稳定、实用的无纸化会议系统！电话：0755-86151919">
+    <!-- Favicons
+    ================================================== -->
+    <link rel="icon" href="__STATIC__/images/favicon.png" type="image/x-icon">
+    <!-- LOAD CSS FILES -->
+    <link href="__STATIC__/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <style>
+        .pagination>li>a, .pagination>li>span {
+            color: #29b6f6;
+            -webkit-transition: color .3s;
+            -moz-transition: color .3s;
+            -ms-transition: color .3s;
+            -o-transition: color .3s;
+            transition: color .3s;
+        }
+        .pagination>.active>a, .pagination>.active>a:focus,
+        .pagination>.active>a:hover, .pagination>.active>span,
+        .pagination>.active>span:focus, .pagination>.active>span:hover {
+            background-color: #29b6f6;
+            color: white;
+            border-color: #29b6f6;
+        }
+        .pagination>li>a:hover {
+            background-color: #8dc3f6;
+            color: white;
+            border-color: #8dc3f6;
+        }
+        .pro_page {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        {block name="css"}{/block}
+    </style>
+    {block name="link"}{/block}
+</head>
+<body>
+<!-- Preload images start //-->
+<div class="images-preloader" id="images-preloader">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!-- Preload images end //-->
+
+<div id="wrapper">
+
+    <!-- header begin -->
+    <header class="site-header-3 site-header">
+        <!-- Main bar start -->
+        <div id="sticked-menu" class="main-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- logo begin -->
+                        <div id="logo" class="site-logo">
+                            <a href="./index.html">
+                                <img src="__STATIC__/images/logo.png" alt="" class="logo">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- Header Group Button Right begin -->
+                        <div class="header-buttons pull-right hidden-xs hidden-sm">
+                            <div class="navright-button">
+                                <a href="" id="btn-offcanvas-menu"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <div class="header-contact">
+                                <ul class="clearfix">
+                                    <li class="contact"><i class="fa fa-envelope"></i> <span>13603025550</span></li>
+                                    <li class="phone"><i class="fa fa-phone"></i> <span>010-6296 3992</span></li>
+                                    <li class="border-line">|</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Header Group Button Right close -->
+
+                        <!-- desktop menu begin -->
+                        <nav id="desktop-menu" class="site-desktop-menu site-desktop-menu-3 hidden-xs hidden-sm">
+                            <ul class="clearfix" id="navlist">
+                                <li class="active"><a href="./index.html" style="color: #25B9F9;">首页</a></li>
+                                <li><a href="all_product">全系产品</a></li>
+                                <li><a href="lift_paperless">升降式无纸化</a>
+                                    <ul>
+                                        <li><a href="comingsoon.html">无纸化触控单屏</a></li>
+                                        <li><a href="404.html">无纸化触控单屏 含话筒咪杆升降</a></li>
+                                        <li><a href="#">无纸化触控单屏 带触控开关</a></li>
+                                        <li><a href="comingsoon.html">无纸化触控大角度单屏 含触控开关</a></li>
+                                        <li><a href="404.html">无纸化触控单屏 定制用户logo</a></li>
+                                        <li><a href="#">无纸化触控单屏 带触控开关</a></li>
+                                        <li><a href="#">无纸化触控单屏 含话筒咪杆升降</a>
+                                            <ul>
+                                                <li><a href="#">Sub link 2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="desk_paperless">桌面式无纸化</a>
+                                    <ul>
+                                        <li><a href="about.html">无纸化桌面式双屏</a></li>
+                                        <li><a href="service.html">无纸化桌面式双屏 带话筒</a></li>
+                                        <li><a href="pricing.html">无纸化桌面式双屏 带触控开关</a></li>
+                                        <li><a href="typography.html">无纸化桌面折叠式双屏 带话筒</a></li>
+                                        <li><a href="element.html">无纸化桌面折叠式单屏</a></li>
+                                        <li><a href="faqs.html">无纸化桌面折叠式双屏 带话筒</a></li>
+                                        <li><a href="faqs.html">无纸化摆放式单屏 双屏</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="ele_tabcard">电子桌牌</a>
+                                    <ul>
+                                        <li><a href="projects-3-cols.html">无纸化升降式电子桌牌双屏</a></li>
+                                        <li><a href="projects-4-cols.html">智能电子桌牌</a></li>
+                                        <li><a href="projects-5-cols.html">智能电子桌牌</a></li>
+                                        <li><a href="project-detail.html">智能电子桌牌</a></li>
+                                        <li><a href="project-detail.html">智能电子桌牌</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="soft_product">软件产品</a>
+                                    <ul>
+                                        <li><a href="shop-catalog.html">无纸化会议控制服务器 含一键同屏</a></li>
+                                        <li><a href="shop-cart.html">信号交互服务器 会议文件智能分发</a></li>
+                                        <li><a href="shop-checkout.html">智慧无纸化系统软件</a></li>
+                                        <li><a href="shop-single.html">互动甩屏系统</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="liqcry_lift">液晶屏升降器</a>
+                                    <ul>
+                                        <li><a href="blog-list.html">超薄圆轴式升降显示屏</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="customer_case">客户案例</a></li>
+                                <li><a href="about_infree">关于英飞</a>
+                                    <ul>
+                                        <li><a href="./about_infree.html?key=1">新闻中心</a></li>
+                                        <li><a href="./about_infree.html?key=2">企业概况</a></li>
+                                        <li><a href="./about_infree.html?key=3">发展历程</a></li>
+                                        <li><a href="./about_infree.html?key=4">企业文化</a></li>
+                                        <li><a href="./about_infree.html?key=5">品牌理念</a></li>
+                                        <li><a href="./about_infree.html?key=6">企业资质</a></li>
+                                        <li><a href="./about_infree.html?key=7">技术支持</a></li>
+                                        <li><a href="./about_infree.html?key=8">系统概述</a></li>
+                                        <li><a href="./about_infree.html?key=9">联系我们</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- desktop menu close -->
+
+                        <!-- btn-mobile menu begin -->
+                        <a id="show-mobile-menu" class="btn-mobile-menu hidden-lg hidden-md"><i class="fa fa-bars"></i></a>
+                        <!-- btn-mobile menu close -->
+
+                        <!-- mobile menu begin -->
+                        <nav id="mobile-menu" class="site-mobile-menu hidden-lg hidden-md">
+                            <ul></ul>
+                        </nav>
+                        <!-- mobile menu close -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header close -->
+    <div class="gray-line3"></div>
+
+    <!-- Modal Search begin -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-dialog myModal-search">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form role="search" method="get" class="search-form" action="">
+                        <input type="search" class="search-field" placeholder="Search here..." value="" title="" />
+                        <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search close -->
+
+    <!-- Menu OffCanvas right begin -->
+    <div class="navright-button hidden-sm">
+        <div class="compact-menu-canvas" id="offcanvas-menu">
+            <h3>导航</h3><a id="btn-close-canvasmenu"><i class="fa fa-close"></i></a>
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="./index.html" style="background-color: #25B9F9">首页</a></li>
+                    <li><a href="./all_product.html">全系产品</a></li>
+                    <li><a href="./lift_paperless.html">升降式无纸化</a></li>
+                    <li><a href="./desk_paperless.html">桌面式无纸化</a></li>
+                    <li><a href="./ele_tabcard.html">电子桌牌</a></li>
+                    <li><a href="./soft_product.html">软件产品</a></li>
+                    <li><a href="./liqcry_lift.html">液晶屏升降器</a></li>
+                    <li><a href="./customer_case.html">客户案例</a></li>
+                    <li><a href="./about_infree.html">关于英飞</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Menu OffCanvas right close -->
+    {block name="content"}{/block}
+    <!-- section begin -->
+    <section id="section-cta">
+        <div class="sep-background-mask"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cal-to-action text-center">
+                        <span>我们已经完成了 <b>100+</b> 的项目，如果你感兴趣</span>
+                        <a href="./about_infree.html?key=9" class="btn btn-border-light">联系我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section close -->
+    <!-- content close -->
+
+    <!-- footer begin -->
+    <footer class="footer-1 bg-color-1">
+
+        <!-- main footer begin -->
+        <div class="main-footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="compact-widget">
+                        <div class="widget-inner">
+                            <img class="logo-footer" src="__STATIC__/images/logo.png" alt="compact company">
+                            <p>深圳英飞数字技术有限公司(英飞INFREE)成立于2010年，是无纸化会议系统的倡导者，是智能会议设备中有影响力的企业之一。英飞INFREE是新加坡智码国际无纸化数字应用技术的核心合作开发商，具有全球优秀的超高压缩数字技术开发能力。</p>
+                            <div class="social-icons clearfix">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="compact-widget">
+                        <h3 class="widget-title">英飞INFREE</h3>
+                        <div class="widget-inner">
+                            <ul>
+                                <li><a href="./index.html">关于我们</a></li>
+                                <li><a href="./customer_case.html">客户案例</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="compact-widget">
+                        <h3 class="widget-title">公司产品</h3>
+                        <div class="widget-inner">
+                            <ul>
+                                <li><a href="./all_product.html">全系产品</a></li>
+                                <li><a href="./lift_paperless.html">升降式无纸化</a></li>
+                                <li><a href="./desk_paperless.html">桌面式无纸化</a></li>
+                                <li><a href="./ele_tabcard.html">电子桌牌</a></li>
+                                <li><a href="./soft_product.html">软件产品</a></li>
+                                <li><a href="./liqcry_lift.html">液晶屏升降器</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="compact-widget">
+                        <h3 class="widget-title">联系我们</h3>
+                        <div class="widget-inner">
+                            <p>地址: 深圳市光明区公明街道上村社区冠城低碳产业园F栋302</p>
+                            <p>电话: 13603025550</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="compact-widget">
+                        <h3 class="widget-title">通讯</h3>
+                        <div class="widget-inner">
+                            <div class="newsletter newsletter-widget">
+                                <p>随时了解我们的新闻和事件</p>
+                                <form action="" method="post">
+                                    <p><input class="newsletter-email" type="email" name="email" placeholder="你的邮箱"><i class="fa fa-envelope-o"></i></p>
+                                    <p><input class="newsletter-submit" type="submit" value="订阅"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main footer close -->
+
+        <!-- sub footer begin -->
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Copyright &copy; 2020.深圳英飞数字技术有限公司 | 粤ICP备13003213号-1 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sub footer close -->
+
+    </footer>
+    <!-- footer close -->
+</div>
+<a id="to-the-top" ><i class="fa fa-angle-up"></i></a>
+<!-- LOAD JS FILES -->
+<script src="__STATIC__/js/jquery.min.js"></script>
+<script src="__STATIC__/js/bootstrap.min.js"></script>
+<script src="__STATIC__/js/imagesloaded.pkgd.min.js"></script>
+<script src="__STATIC__/js/easing.js"></script>
+<script src="__STATIC__/js/owl.carousel.js"></script>
+<script src="__STATIC__/js/jquery.fitvids.js"></script>
+<script src="__STATIC__/js/wow.min.js"></script>
+<script src="__STATIC__/js/jquery.magnific-popup.min.js"></script>
+
+<!-- Waypoints -->
+<script src="__STATIC__/js/jquery.waypoints.min.js"></script>
+<script src="__STATIC__/js/sticky.min.js"></script>
+<script src="__STATIC__/js/compact.js"></script>
+<script src="__STATIC__/js/custom-index3.js"></script>
+
+<!-- SLIDER REVOLUTION SCRIPTS  -->
+<script type="text/javascript" src="__STATIC__/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="__STATIC__/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="__STATIC__/js/revslider-custom.js"></script>
+
+<!--&lt;!&ndash; Project Grid &ndash;&gt;-->
+<!--<script type="text/javascript" src="__STATIC__/js/imagesloaded.pkgd.min.js"></script>-->
+<!--<script type="text/javascript" src="__STATIC__/js/masonry.js"></script>-->
+<!--<script type="text/javascript" src="__STATIC__/js/jquery.isotope.min.js"></script>-->
+
+{block name="js"}{/block}
+</body>
+</html>
