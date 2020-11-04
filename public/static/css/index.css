@@ -1,0 +1,78 @@
+.product {
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background :white;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow:  8px 8px 16px #e3e3e3, 
+    -8px -8px 16px #ffffff;
+}
+.product>.img {
+    overflow: hidden;
+    border-radius: 4px;
+    width: 212px;
+    height: 124px;
+}
+.row>div {
+    margin-top: 10px;
+}
+.product>span {
+    line-height: 30px;
+}
+.product>div>img {
+    transition: .4s;
+}
+.product>div>img:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.pro_name {
+    width: 212px;
+    line-height: 40px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+}
+.pro_name>div {
+    color: black;
+    width: 148px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pro_name>span {
+    white-space:nowrap;/*规定段落中的文本不进行换行*/
+    overflow:hidden;/*内容会被修剪，并且其余内容是不可见的。*/
+    text-overflow:ellipsis;/*显示省略号来代表被修剪的文本*/
+}
+.pro_detail {
+    line-height: 24px;
+    width: 212px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    -webkit-box-orient: vertical;
+}
+@media screen and (max-width: 768px) {
+    .product>.img {
+        width: 422px;
+    }
+}
